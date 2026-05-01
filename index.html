@@ -246,7 +246,7 @@
 <!-- ══════════════════════════════════════ LOGIN ══════════════════════════════════════ -->
 <div id="screen-login" class="screen active">
   <div class="login-card">
-    <div class="login-logo">LEO.ALLFIT</div>
+    <div class="login-logo">LEO ALLFIT</div>
     <div class="login-sub">Plataforma de entrenamiento personalizado</div>
     <button class="btn-google" onclick="loginGoogle()">
       <svg class="google-icon" viewBox="0 0 24 24"><path fill="#EA4335" d="M5.26 9.77A7.18 7.18 0 0 1 12 4.8c1.73 0 3.28.62 4.52 1.64l3.36-3.36A12 12 0 0 0 0 12c0 2.01.49 3.9 1.36 5.57l3.9-3.02A7.21 7.21 0 0 1 4.8 12c0-.77.16-1.52.46-2.23z"/><path fill="#FBBC05" d="M12 19.2c-1.98 0-3.77-.68-5.17-1.8l-3.9 3.02A12 12 0 0 0 12 24c3.24 0 5.95-1.2 8.06-3.14l-3.73-2.9A7.14 7.14 0 0 1 12 19.2z"/><path fill="#4285F4" d="M23.04 12.27c0-.79-.07-1.55-.2-2.27H12v4.3h6.19a5.3 5.3 0 0 1-2.28 3.47l3.73 2.9C21.71 18.72 23.04 15.77 23.04 12.27z"/><path fill="#34A853" d="M5.26 14.23A7.21 7.21 0 0 1 4.8 12c0-.77.16-1.52.46-2.23L1.36 6.43A12.02 12.02 0 0 0 0 12c0 1.9.44 3.7 1.22 5.28l4.04-3.05z"/></svg>
@@ -1167,3 +1167,21 @@ seedData();
 </script>
 </body>
 </html>
+<script type="module">
+  // Configuración de Firebase
+  const FIREBASE_CONFIG = {
+    apiKey: "AIzaSyDGvsewoB1q4wTbjBuemObBk9ZAo278qI4",
+    authDomain: "allfit-app-9f7f8.firebaseapp.com",
+    projectId: "allfit-app-9f7f8",
+    storageBucket: "allfit-app-9f7f8.firebasestorage.app",
+    messagingSenderId: "184714688286",
+    appId: "1:184714688286:web:5b367e318cbba2fcaa7b0f",
+    measurementId: "G-GCKT134HD4"
+  };
+
+  // Correo del entrenador (lo definís vos)
+  const TRAINER_EMAIL = "allfit.asesorias@gmail.com";
+
+  // Inicializar Firebase
+  const app = initializeApp(FIREBASE_CONFIG);
+</script>
