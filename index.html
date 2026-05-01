@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Leo.allfit — Entrenamientos</title>
+<title>Leo allfit — Entrenamientos</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -99,7 +99,7 @@
 
   /* ── BUTTONS ── */
   .btn { padding: 10px 20px; border-radius: 8px; font-family: 'DM Sans'; font-size: 14px; font-weight: 500; cursor: pointer; border: none; transition: all .2s; }
-  .btn-primary { background: var(--orange); color: #fff; }
+  .btn-primary { background: var(--blue); color: #fff; }
   .btn-primary:hover { background: #d44508; }
   .btn-secondary { background: var(--bg3); color: var(--text); border: 1px solid var(--border); }
   .btn-secondary:hover { border-color: var(--orange); color: var(--orange); }
@@ -570,7 +570,7 @@
 // STATE
 // ════════════════════════════════════════════════════════════
 let state = {
-  role: null, // 'trainer' | 'client'
+  role: null, // 'trainer' | 'cliente'
   user: null,
   currentClient: null,
   currentWeek: 1,
@@ -583,11 +583,7 @@ let state = {
 // ────── SEED DATA ──────
 function seedData() {
   state.clients = [
-    { id:'c1', name:'Marcos García',  email:'marcos@gmail.com',  age:28, weight:82.3, goal:'Hipertrofia', days:4, initDate:'2025-01-15' },
-    { id:'c2', name:'Juan Romero',    email:'juan@gmail.com',    age:32, weight:90.1, goal:'Hipertrofia', days:4, initDate:'2025-02-01' },
-    { id:'c3', name:'Lucas Ferreira', email:'lucas@gmail.com',   age:25, weight:75.5, goal:'Fuerza',      days:5, initDate:'2025-01-20' },
-    { id:'c4', name:'Pablo Estrada',  email:'pablo@gmail.com',   age:35, weight:95.0, goal:'Recomposición',days:3,initDate:'2025-02-10' },
-  ];
+    { 
 
   const mkExercises = (names) => names.map(n => ({
     name: n,
@@ -643,7 +639,7 @@ function loginGoogle() {
 function loginDemo(role) {
   state.role = role;
   if (role === 'trainer') {
-    state.user = { name:'Leo Massud', email:'leo@allfit.com', initials:'L' };
+    state.user = { name:'Leo Massud', email:'allfit.asesorias@gmail.com', initials:'Loin' };
   } else {
     state.user = { name:'Marcos García', email:'marcos@gmail.com', initials:'MG' };
     state.currentClient = state.clients[0];
@@ -1166,22 +1162,4 @@ function showToast(msg, color='var(--success)') {
 seedData();
 </script>
 </body>
-</html>
-<script type="module">
-  // Configuración de Firebase
-  const FIREBASE_CONFIG = {
-  
-    authDomain: "allfit-app-9f7f8.firebaseapp.com",
-    projectId: "allfit-app-9f7f8",
-    storageBucket: "allfit-app-9f7f8.firebasestorage.app",
-    messagingSenderId: "184714688286",
-    appId: "1:184714688286:web:5b367e318cbba2fcaa7b0f",
-    measurementId: "G-GCKT134HD4"
-  };
-
-  // Correo del entrenador (lo definís vos)
-  const TRAINER_EMAIL = "allfit.asesorias@gmail.com";
-
-  // Inicializar Firebase
-  const app = initializeApp(FIREBASE_CONFIG);
-</script>
+</html> 
